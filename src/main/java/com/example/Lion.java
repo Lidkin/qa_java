@@ -19,9 +19,8 @@ public class Lion {
         }
     }
 
-    //Feline feline;
     public int getKittens() {
-        return predator.getKittens(1);
+        return predator.getKittens();
     }
 
     public boolean doesHaveMane() {
