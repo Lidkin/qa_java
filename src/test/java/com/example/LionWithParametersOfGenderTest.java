@@ -1,5 +1,6 @@
 package com.example;
 
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -30,7 +31,7 @@ public class LionWithParametersOfGenderTest {
 
 
     @Test
-    public void doesHaveMane() throws Exception {
+    public void lionDoesHaveMane() throws Exception {
         Lion lion = new Lion(lionSex, new Feline());
         assertEquals(true, lion.doesHaveMane());
 
