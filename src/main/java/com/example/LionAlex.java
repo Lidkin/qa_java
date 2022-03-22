@@ -4,17 +4,13 @@ import java.util.List;
 
 public class LionAlex extends Lion {
 
-    boolean hasMane;
+
+    private static final String sex = "Самец";
 
 
-    public LionAlex(String sex, Feline feline) throws Exception{
+    public LionAlex(Feline feline) throws Exception {
         super(sex, feline);
-        if ("Самец".equals(sex)) {
-            hasMane = true;
-        } else {
-            throw new Exception("Алекс самец");
         }
-    }
 
 
    @Override
@@ -24,12 +20,13 @@ public class LionAlex extends Lion {
 
    @Override
     public boolean doesHaveMane() {
-        return hasMane;
+
+        return hasMane = true;
     }
 
-    @Override
-    public List<String> getFood() {
-        return List.of("Животные", "Птицы", "Рыба");
+
+    public List<String> getFood() throws Exception {
+        return super.getFood();
     }
 
     public List<String> getFriends(){
