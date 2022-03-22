@@ -28,11 +28,7 @@ public class LionCountKittensWithParametersTest {
     public void countKittensTest() throws Exception {
         Lion lion = new Lion("Самка", new Feline());
         int actual = lion.getKittens();
-        if (actual < 0 || expected < 0) {
-            assertEquals("Котят должно быть больше 0", expected, actual);
-        } else {
             assertEquals("Стоит пересчитать котят", expected, actual);
-        }
     }
 
-  }
+ }
