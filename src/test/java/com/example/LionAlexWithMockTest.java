@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 
 @RunWith(MockitoJUnitRunner.class)
 
-public class LionAlexMockTest {
+public class LionAlexWithMockTest {
 
 @Mock
 Feline feline;
@@ -26,7 +26,7 @@ Feline feline;
     @Test
     public void doesHaveMane() throws Exception{
         LionAlex lionAlex = new LionAlex(feline);
-        assertEquals(true, lionAlex.doesHaveMane());
+        assertTrue(lionAlex.doesHaveMane());
     }
 
     @Test

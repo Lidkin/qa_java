@@ -8,6 +8,7 @@ import org.junit.runners.Parameterized;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
 
@@ -26,7 +27,6 @@ public class LionWithParametersOfGenderTest {
         return new Object[][]{
                 {"Самка"},
                 {"Самец"},
-                {"не определено"},
         };
     }
 
@@ -34,7 +34,7 @@ public class LionWithParametersOfGenderTest {
     @Test
     public void lionDoesHaveMane() throws Exception {
         Lion lion = new Lion(lionSex, new Feline());
-        assertEquals("Это самка. Грива вырастает только у самцов",true, lion.doesHaveMane());
+        assertTrue("Это самка. Грива вырастает только у самцов", lion.doesHaveMane());
     }
 
 
