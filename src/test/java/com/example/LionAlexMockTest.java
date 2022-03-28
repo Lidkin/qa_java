@@ -15,37 +15,37 @@ import static org.junit.Assert.*;
 public class LionAlexMockTest {
 
 @Mock
-Feline mockAlexFeline;
+Feline feline;
 
     @Test
     public void lionAlexHasNoKittens() throws Exception {
-        LionAlex lionAlex = new LionAlex(mockAlexFeline);
+        LionAlex lionAlex = new LionAlex(feline);
         assertEquals(0, lionAlex.getKittens());
     }
 
     @Test
     public void doesHaveMane() throws Exception{
-        LionAlex lionAlex = new LionAlex(mockAlexFeline);
-        assertTrue(lionAlex.doesHaveMane());
+        LionAlex lionAlex = new LionAlex(feline);
+        assertEquals(true, lionAlex.doesHaveMane());
     }
 
     @Test
     public void getFood() throws Exception {
-        LionAlex lionAlex = new LionAlex(mockAlexFeline);
-        Mockito.when(mockAlexFeline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+        LionAlex lionAlex = new LionAlex(feline);
+        Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         assertEquals(List.of("Животные", "Птицы", "Рыба"), lionAlex.getFood());
     }
 
     @Test
     public void getFriends() throws Exception{
-        LionAlex lionAlex = new LionAlex(mockAlexFeline);
+        LionAlex lionAlex = new LionAlex(feline);
         assertEquals(List.of("Марти", "Глория", "Мелман"), lionAlex.getFriends());
 
     }
 
     @Test
     public void getPlaceOfLiving() throws Exception{
-        LionAlex lionAlex = new LionAlex(mockAlexFeline);
+        LionAlex lionAlex = new LionAlex(feline);
         assertEquals("Нью-Йоркский зоопарк", lionAlex.getPlaceOfLiving());
     }
 

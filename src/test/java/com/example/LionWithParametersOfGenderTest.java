@@ -1,15 +1,16 @@
 package com.example;
 
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+
 
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
+
 
 public class LionWithParametersOfGenderTest {
     private final String lionSex;
@@ -33,9 +34,9 @@ public class LionWithParametersOfGenderTest {
     @Test
     public void lionDoesHaveMane() throws Exception {
         Lion lion = new Lion(lionSex, new Feline());
-        assertEquals(true, lion.doesHaveMane());
-
+        assertEquals("Это самка. Грива вырастает только у самцов",true, lion.doesHaveMane());
     }
+
 
     @Test
     public void lionFood() throws Exception {

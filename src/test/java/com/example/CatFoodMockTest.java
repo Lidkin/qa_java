@@ -25,5 +25,4 @@ public class CatFoodMockTest {
         assertEquals(List.of("Животные", "Птицы", "Рыба"), catMock.getFood());
 
     }
-
 }

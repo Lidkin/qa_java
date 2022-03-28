@@ -7,7 +7,6 @@ public class LionAlex extends Lion {
 
     private static final String sex = "Самец";
 
-
     public LionAlex(Feline feline) throws Exception {
         super(sex, feline);
         }
@@ -20,13 +19,11 @@ public class LionAlex extends Lion {
 
    @Override
     public boolean doesHaveMane() {
-
-        return hasMane = true;
+        return true;
     }
 
-
     public List<String> getFood() throws Exception {
-        return super.getFood();
+        return feline.getFood("Хищник");
     }
 
     public List<String> getFriends(){

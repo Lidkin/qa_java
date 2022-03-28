@@ -16,6 +16,7 @@ public class FelineEatMeatFamilyTypeOneKittenHaveTest {
         assertEquals(List.of("Животные", "Птицы", "Рыба"), feline.eatMeat());
     }
 
+
     @Test
     public void familyType() {
 
@@ -25,7 +26,7 @@ public class FelineEatMeatFamilyTypeOneKittenHaveTest {
     @Test
     public void oneKittenHave() {
 
-        assertEquals( 1, feline.getKittens());
+        assertEquals( 1, feline.getKittens(1));
     }
 
  }
